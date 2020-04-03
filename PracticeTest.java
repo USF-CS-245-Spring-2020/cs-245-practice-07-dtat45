@@ -94,12 +94,13 @@ public class PracticeTest {
 			} else {
 				System.out.println("[ XX ] One or more Stack functions appear incorrect.");
 			}
-			
+
 			// Additional sanity test: place a large number of items in the stack / queue to see if it resizes.
 			for (int i = 0; i < size_of_test; i++) {
 				queue.enqueue(randomString);
 				stack.push(randomString);
 			}
+			// Nothing is run this line and onward???
 			boolean emptiedEarly = false;
 			for (int i = 0; i < size_of_test; i++) {
 				if ( queue.empty() || stack.empty()) {
@@ -142,7 +143,7 @@ public class PracticeTest {
 				}
 			}
 		} catch (Exception e) {
-			// Do nothing
+			System.out.println("Exception caught");
 		} finally {
 			System.out.println("====================");
 			System.out.println("Grade for this assignment: " + grade + "%");
